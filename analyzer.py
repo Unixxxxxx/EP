@@ -26,3 +26,10 @@ summary = {
 summary_df = pd.DataFrame(summary)
 print("Sales Summary:")
 print(summary_df)
+
+# Step 4: Export Results
+with pd.ExcelWriter("sales_report.xlsx") as writer:
+    data.to_excel(writer, sheet_name="Cleaned Data", index=False)
+    summary_df.to_excel(writer, sheet_name="Summary Report", index=False)
+
+print("\n✅ Analysis Complete! Report saved as 'sales_report.xlsx'.")
