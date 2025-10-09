@@ -32,4 +32,4 @@ with pd.ExcelWriter("sales_report.xlsx") as writer:
     data.to_excel(writer, sheet_name="Cleaned Data", index=False)
     summary_df.to_excel(writer, sheet_name="Summary Report", index=False)
 
-print("\n✅ Analysis Complete! Report saved as 'sales_report.xlsx'.")
+print("\n Analysis Complete! Report saved as 'sales_report.xlsx'.")
